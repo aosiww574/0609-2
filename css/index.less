@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  font-family: 'NotoSansTC', 'Courier New', Courier, monospace;
+}
+
+@font-face {
+  font-family: 'NotoSansTC';
+  src: url(../fonts/NotoSansSC-Regular.otf);
+}
+
+@font-face {
+  font-family: 'NotoSansTC-Light';
+  src: url(../fonts/NotoSansSC-Light.otf);
+}
+
+.img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.deck {
+  display: none;
+}
+
+.decktext {
+  display: none;
+}
+
+.phonetext {
+  display: block;
+}
+
+.wrapper {
+  animation: Emerge 3s;
+  padding: 10px;
+  padding-top: 50px;
+
+  p {
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #777;
+
+    img {
+      width: 35px;
+      vertical-align: bottom;
+    }
+  }
+  .w-p{
+    line-height: 35px;
+  }
+
+  h2 {
+    margin: 20px 25px;
+    font-family: 'NotoSansTC-Light', 'Courier New', Courier, monospace;
+  }
+}
+
+button {
+  border: none;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 40px auto;
+  display: block;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .img {
+    display: none;
+  }
+
+  .deck {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .decktext {
+    display: block;
+  }
+
+  .phonetext {
+    display: none;
+  }
+
+  .wrapper {
+    width: 50%;
+    position: absolute;
+    left: 45%;
+    top: 0;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    button {
+      position: absolute;
+      top: 90%;
+      left: 15%;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .img {
+    display: none;
+  }
+
+  .deck {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .wrapper {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    button {
+      position: absolute;
+      top: 100%;
+      left: 15%;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .img {
+    display: none;
+  }
+
+  .deck {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .wrapper {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    button {
+      position: absolute;
+      top: 100%;
+      left: 15%;
+    }
+  }
+}
+
+@keyframes Emerge {
+  0% {
+    margin-left: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
