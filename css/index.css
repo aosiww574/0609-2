@@ -16,7 +16,6 @@
 .img {
   position: absolute;
   width: 100%;
-  z-index: -1;
 }
 .deck {
   display: none;
@@ -28,7 +27,7 @@
   display: block;
 }
 .wrapper {
-  animation: Emerge 3s;
+  animation: Emerge 3s forwards;
   padding: 10px;
   padding-top: 50px;
 }
@@ -70,23 +69,41 @@
   opacity: 0;
   animation: Emerge 3s 2s forwards;
 }
-button {
+a {
+  text-decoration: none;
+}
+a button {
   border: none;
   font-size: 24px;
   line-height: 24px;
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #2960ac;
+  border: 1px solid #2960ac;
   padding: 10px 20px;
   border-radius: 5px;
   margin: 40px auto;
   display: block;
   cursor: pointer;
 }
+a button:hover {
+  background-color: #2960ac;
+  color: #fff;
+}
+a button:hover i {
+  color: #addef8;
+}
+a button i {
+  font-size: 24px;
+  position: relative;
+  color: #2960ac;
+  margin-right: 5px;
+  animation: fly 5s 3s linear;
+}
 @media screen and (max-width: 992px) {
   .wrapper p {
     padding: 5px 10px;
   }
-  button {
+  a button {
     margin-top: 110px;
   }
 }
@@ -98,7 +115,6 @@ button {
     display: block;
     position: relative;
     width: 100%;
-    z-index: -1;
   }
   .box2,
   .decktext {
@@ -156,7 +172,7 @@ button {
     display: block;
     position: relative;
     width: 100%;
-    z-index: -1;
+    display: none;
   }
   .wrapper {
     width: 60%;
@@ -183,34 +199,43 @@ button {
     opacity: 1;
   }
 }
-@keyframes Emerge2 {
-  0% {
-    margin-left: 10px;
-    opacity: 0;
-  }
-  10% {
-    margin-left: 10px;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 0;
-    opacity: 1;
-  }
-}
-@keyframes Emerge3 {
-  0% {
-    margin-left: 10px;
-    opacity: 0;
-  }
-  20% {
-    margin-left: 10px;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 0;
-    opacity: 1;
-  }
-}
 .ha {
   display: block;
+}
+@keyframes fly {
+  0% {
+    transform: rotateZ(0deg);
+    top: 0;
+    left: 0;
+  }
+  20% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    top: -45px;
+    left: 45px;
+  }
+  30% {
+    transform: rotateZ(-180deg);
+  }
+  50% {
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  70% {
+    transform: rotateZ(-180deg);
+  }
+  75% {
+    top: 40px;
+    left: -40px;
+  }
+  80% {
+    transform: rotateZ(-360deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+    top: 0;
+    left: 0;
+  }
 }
