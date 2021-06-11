@@ -36,18 +36,20 @@
 
 .wrapper {
   animation: Emerge 3s forwards;
-  padding: 10px;
-  padding-top: 50px;
+  padding: 40px 10px 0;
 
   p {
     padding: 10px 25px;
     background-color: transparent;
     color: #777;
+
   }
 
   .pimg-wrapper {
-    line-height: 50px;
+    // line-height: 50px;
+    line-height: 30px;
     display: flex;
+    text-align: center;
 
     .pimg {
       opacity: 0;
@@ -68,6 +70,10 @@
         display: block;
         margin: 0 auto;
         width: 50px;
+      }
+
+      p {
+        font-size: 16px;
       }
     }
   }
@@ -124,15 +130,35 @@ a {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .wrapper {
+    .one {
+      text-align: right;
+    }
+
+    .pimg-wrapper {
+      flex-direction: column;
+    }
+
+  }
+
+}
+
 @media screen and (max-width: 992px) {
-  .wrapper p {
-    padding: 5px 10px;
+  .wrapper {
+    p {
+      padding: 5px 10px;
+    }
+
+    .one {
+      text-align: right;
+    }
   }
 
   a {
 
     button {
-      margin-top: 110px;
+      margin-top: 50px;
     }
   }
 }
@@ -215,9 +241,9 @@ a {
   }
 
   .deck {
-    display: block;
     position: relative;
     width: 100%;
+    display: block;
   }
 
   .wrapper {

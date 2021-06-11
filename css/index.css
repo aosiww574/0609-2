@@ -29,8 +29,7 @@
 }
 .wrapper {
   animation: Emerge 3s forwards;
-  padding: 10px;
-  padding-top: 50px;
+  padding: 40px 10px 0;
 }
 .wrapper p {
   padding: 10px 25px;
@@ -38,8 +37,9 @@
   color: #777;
 }
 .wrapper .pimg-wrapper {
-  line-height: 50px;
+  line-height: 30px;
   display: flex;
+  text-align: center;
 }
 .wrapper .pimg-wrapper .pimg {
   opacity: 0;
@@ -57,6 +57,9 @@
   display: block;
   margin: 0 auto;
   width: 50px;
+}
+.wrapper .pimg-wrapper .pimg p {
+  font-size: 16px;
 }
 .wrapper h2 {
   margin: 20px 25px;
@@ -100,12 +103,23 @@ a button i {
   margin-right: 5px;
   animation: fly 5s 3s linear;
 }
+@media screen and (max-width: 576px) {
+  .wrapper .one {
+    text-align: right;
+  }
+  .wrapper .pimg-wrapper {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 992px) {
   .wrapper p {
     padding: 5px 10px;
   }
+  .wrapper .one {
+    text-align: right;
+  }
   a button {
-    margin-top: 110px;
+    margin-top: 50px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -170,9 +184,9 @@ a button i {
     display: none;
   }
   .deck {
-    display: block;
     position: relative;
     width: 100%;
+    display: block;
   }
   .wrapper {
     width: 60%;
