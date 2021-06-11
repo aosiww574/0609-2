@@ -24,6 +24,7 @@
   display: none;
 }
 .phonetext {
+  font-size: 16px;
   display: block;
 }
 .wrapper {
@@ -172,7 +173,6 @@ a button i {
     display: block;
     position: relative;
     width: 100%;
-    display: none;
   }
   .wrapper {
     width: 60%;
@@ -204,19 +204,21 @@ a button i {
 }
 @keyframes fly {
   0% {
-    transform: rotateZ(0deg);
+    transform: rotate(0deg);
     top: 0;
     left: 0;
   }
   20% {
-    transform: rotateZ(0deg);
+    transform: rotate(0deg);
+    transform: rotateZ(0deg) translateX(10px);
   }
   25% {
     top: -45px;
     left: 45px;
   }
   30% {
-    transform: rotateZ(-180deg);
+    transform: rotate(-180deg);
+    transform: rotateZ(-180deg) translateX(10px);
   }
   50% {
     top: 0;
@@ -224,17 +226,17 @@ a button i {
     z-index: -1;
   }
   70% {
-    transform: rotateZ(-180deg);
+    transform: rotate(-180deg);
   }
   75% {
     top: 40px;
     left: -40px;
   }
   80% {
-    transform: rotateZ(-360deg);
+    transform: rotate(-360deg) translateX(10px);
   }
   100% {
-    transform: rotateZ(-360deg);
+    transform: rotate(-360deg);
     top: 0;
     left: 0;
   }
